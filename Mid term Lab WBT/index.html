@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Tech Connect - Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <div class="container">
+        <h1>Global Tech Connect</h1>
+        <h2>Event Registration Form</h2>
+ 
+        <form id="registrationForm">
+            <!-- Full Name -->
+            <label for="fullname">Full Name *</label>
+            <input type="text" id="fullname" placeholder="Enter your full name">
+            <p class="error" id="nameError"></p>
+ 
+            <!-- Email -->
+            <label for="email">Professional Email *</label>
+            <input type="text" id="email" placeholder="example@company.com">
+            <p class="error" id="emailError"></p>
+ 
+            <!-- Company -->
+            <label for="company">Company / Institution (Optional)</label>
+            <input type="text" id="company" placeholder="Company or Institution Name">
+            <p class="error" id="companyError"></p>
+ 
+            <!-- Attendance Type -->
+            <label>Attendance Type *</label>
+            <div class="radio-group">
+                <label><input type="radio" name="attendance" value="Virtual"> Virtual</label>
+                <label><input type="radio" name="attendance" value="In-Person"> In-Person</label>
+            </div>
+            <p class="error" id="attendanceError"></p>
+ 
+            <button type="submit" id="registerBtn">Register</button>
+        </form>
+ 
+        <button id="analyticsBtn">Show Event Analytics</button>
+ 
+        <!-- Statistics Panel -->
+        <div id="analyticsPanel" class="hidden">
+            <h3>Event Analytics</h3>
+            <p><strong>Total Registrants:</strong> <span id="totalCount">0</span></p>
+            <p><strong>Virtual:</strong> <span id="virtualCount">0</span></p>
+            <p><strong>In-Person:</strong> <span id="inpersonCount">0</span></p>
+        </div>
+    </div>
+ 
+<script src="script.js"></script>
+</body>
+</html>
